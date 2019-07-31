@@ -11,7 +11,3 @@ check_task:
 task:
   name: "Staging Deploy"
   trigger_type: manual
-  depends_on:
-    - Tests (Unit)
-    - Tests (Ingegration)
-    - Lint
