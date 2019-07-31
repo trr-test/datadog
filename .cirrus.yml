@@ -7,4 +7,6 @@ build_task:
 
 task:
   name: "Staging Deploy"
+  container:
+    image: docker:latest
   trigger_type: manual
