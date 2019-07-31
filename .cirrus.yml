@@ -1,3 +1,11 @@
+test_task:
+  container:
+    matrix:
+      - image: node:latest
+      - image: node:lts
+      - image: docker:latest
+  test_script: sleep 300
+
 build_task:
   name: "Build Docker Image"
   container:
@@ -13,3 +21,4 @@ task:
   container:
     image: docker:latest
   trigger_type: manual
+
