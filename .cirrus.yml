@@ -2,6 +2,8 @@ build_task:
   name: "Build Docker Image"
   container:
     image: docker:latest
+  start_dockerd_background_script:
+    dockerd
   build_script:
     docker build -t worker .
 
