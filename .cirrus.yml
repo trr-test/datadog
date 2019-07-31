@@ -2,7 +2,7 @@ build_task:
   name: "Build Docker Image"
   container:
     image: docker:latest
-  build:
+  build_script:
     docker build -t worker .
 
 task:
