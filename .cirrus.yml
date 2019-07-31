@@ -7,3 +7,11 @@ check_task:
     fingerprint_script: cat yarn.lock
     populate_script: yarn install
   test_script: yarn test
+
+task:
+  name: "Staging Deploy"
+  trigger_type: manual
+  depends_on:
+    - Tests (Unit)
+    - Tests (Ingegration)
+    - Lint
