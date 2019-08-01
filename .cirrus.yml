@@ -1,20 +1,11 @@
-test_task:
+parallel_task:
+  name: "Parallel Execution of Tasks"
   container:
     matrix:
       - image: node:latest
       - image: node:lts
       - image: docker:latest
   test_script: sleep 300
-
-build_task:
-  name: "Build Docker Image"
-  container:
-    image: docker:latest
-  start_dockerd_background_script:
-    dockerd
-  build_script:
-    docker build -t worker .
-
 
 task:
   name: "Staging Deploy"
