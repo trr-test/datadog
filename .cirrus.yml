@@ -1,0 +1,18 @@
+task:
+  name: "Deploy Review Environment Apps"
+  container:
+    image: docker:latest
+  env:
+    matrix:
+      - APP: web
+      - APP: website
+      - APP: api
+      - APP: api-gateway
+      - APP: inventory
+  test_script: sleep 60
+
+task:
+  name: "Deploy to Production"
+  container:
+    image: docker:latest
+  trigger_type: manual
