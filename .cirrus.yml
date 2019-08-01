@@ -1,4 +1,4 @@
-deploy_review_environment_apps_task:
+task:
   name: "Deploy Review Environment Apps"
   container:
     image: docker:latest
