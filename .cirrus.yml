@@ -10,6 +10,7 @@ docker_build_task:
   name: "Docker Build"
   container:
     image: docker:dind
+    privileged: true
   background_script: dockerd
   build_script: docker build .
 
