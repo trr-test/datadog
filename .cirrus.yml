@@ -7,13 +7,11 @@ parallel_task:
   test_script: sleep 300
 
 docker_build_task:
-  name: "Docker Build"
+  name: "Build Docker Image"
   container:
-    image: docker:dind
-    privileged: true
-  background_script: dockerd
+    image: gcr.io/kaniko-project/executor
   build_script: docker build .
-
+  
 task:
   name: "Staging Deploy"
   container:
