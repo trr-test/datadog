@@ -6,12 +6,6 @@ parallel_task:
       - image: node:lts
   test_script: sleep 300
 
-docker_build_task:
-  name: "Build Docker Image"
-  container:
-    image: gcr.io/kaniko-project/executor
-  build_script: docker build .
-  
 task:
   name: "Staging Deploy"
   container:
