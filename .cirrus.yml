@@ -8,7 +8,8 @@ parallel_task:
 
 docker_build_task:
   name: "Docker Build"
-  container: docker:dind
+  container:
+    image: docker:dind
   background_script: dockerd
   build_script: docker build .
 
