@@ -1,13 +1,18 @@
 parallel_task:
   name: "Parallel Execution of Tasks"
   container:
+    image: docker:latest
+  env:
     matrix:
-      - image: node:latest
-      - image: node:lts
-  test_script: sleep 300
+      - APP: web
+      - APP: website
+      - APP: api
+      - APP: api-gateway
+      - APP: inventory
+  test_script: sleep 60
 
 task:
-  name: "Staging Deploy"
+  name: "Deploy to Production"
   container:
     image: docker:latest
   trigger_type: manual
