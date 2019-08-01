@@ -1,5 +1,5 @@
-parallel_task:
-  name: "Parallel Execution of Tasks"
+deploy_review_environment_apps_task:
+  name: "Deploy Review Environment Apps"
   container:
     image: docker:latest
   env:
@@ -16,4 +16,3 @@ task:
   container:
     image: docker:latest
   trigger_type: manual
-
